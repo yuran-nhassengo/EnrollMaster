@@ -78,7 +78,7 @@ export default function LoginPage() {
                 Esqueceu-se?
               </Link>
             </div>
-            <div className="relative group">
+            <div className="flex w-full gap">
               <Lock className="absolute left-4 top-4.5 h-6 w-6 text-slate-400 group-focus-within:text-blue-600 transition-colors" />
               <Input
                 id="password"
@@ -93,6 +93,20 @@ export default function LoginPage() {
           </div>
         </div>
 
+
+          <div className="flex w-full justify-center gap-2 ">
+         <Button 
+          type="submit" 
+          disabled={loading}
+          className="w-full h-16 bg-red-600 hover:bg-red-700 text-white font-extrabold text-xl rounded-2xl transition-all shadow-xl shadow-blue-100 active:scale-[0.97]"
+        >
+          
+            <span className="flex items-center gap-3">
+              Limpar 
+            </span>
+          
+        </Button>
+
         <Button 
           type="submit" 
           disabled={loading}
@@ -106,6 +120,9 @@ export default function LoginPage() {
             </span>
           )}
         </Button>
+
+          </div>
+
       </form>
 
       <div className="pt-8 text-center">

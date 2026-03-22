@@ -3,16 +3,7 @@ import { GraduationCap, CheckCircle2 } from "lucide-react";
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-screen bg-white">
-      {/* LADO ESQUERDO: Formulários */}
-      <div className="flex w-full flex-col justify-center px-8 md:w-[450px] lg:w-[550px] xl:w-[650px] border-r border-slate-100">
-        <div className="mx-auto w-full max-w-[380px] space-y-8">
-          <div className="flex items-center gap-2 font-bold text-blue-600 mb-4">
-            <GraduationCap className="h-10 w-10" />
-            <span className="text-2xl tracking-tighter">EnrollMaster</span>
-          </div>
-          {children}
-        </div>
-      </div>
+      
 
       {/* LADO DIREITO: Painel Informativo (O Slide) */}
       <div className="hidden flex-1 bg-slate-950 lg:block relative">
@@ -48,6 +39,19 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
             </p>
             <p className="mt-4 font-bold">— Escola Internacional de Maputo</p>
           </div>
+        </div>
+      </div>
+
+
+      {/* LADO ESQUERDO: Formulários */}
+      {/* <div className="flex w-full flex-col justify-center px-8 md:w-[450px] lg:w-[550px] xl:w-[650px] border-r border-slate-100"> */}
+      <div className="flex flex-1 flex-col px-8 justify-center">
+        <div className="mx-auto w-full max-w-[380px] space-y-8">
+          <div className="flex items-center gap-2 font-bold text-blue-600 mb-4">
+            <GraduationCap className="h-10 w-10" />
+            <span className="text-2xl tracking-tighter">EnrollMaster</span>
+          </div>
+          {children}
         </div>
       </div>
     </div>
